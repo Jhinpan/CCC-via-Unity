@@ -11,3 +11,10 @@ We will be creating a content creation app using Unity, which will have basic ch
   Setting up the connection - To begin, we will establish a connection between the Unity client and the Python server. This connection will allow them to exchange messages with each other. Think of the Unity app as the "client" and the Python app as the "server." The socket connection will enable them to send and receive messages seamlessly.
 ### Implementation: 
   By adding the C#connect.cs as the client script for a cube in the unity and a python script server.py, we realize the seamless connection between unity and python which can be seen as we can make the cube in the unity constantly moving and reporting through both console terminal.
+  
+--- 
+
+## Step 2:
+### Requirement:
+  Building the Unity user interface - In Unity, we will implement the user interface (UI) where the user can interact with the app. The UI will include a text input field where the user can enter the name of an object they want to create in the scene. For example, they might enter "spheres" or "cubes."
+### Implementation:
