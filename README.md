@@ -14,7 +14,14 @@ We will be creating a content creation app using Unity, which will have basic ch
   
 --- 
 
-## Step 2:
+## Step 2: (Done)
 ### Requirement:
   Building the Unity user interface - In Unity, we will implement the user interface (UI) where the user can interact with the app. The UI will include a text input field where the user can enter the name of an object they want to create in the scene. For example, they might enter "spheres" or "cubes."
 ### Implementation:
+  Implement a input field under a canvas and adjust it according to the instruction from online. And also write an readInput.cs to this text input field that can reflect what the user input through the unity console
+  
+ ---
+ 
+ ## Step 3:
+ ### Requirement:
+  Adding interactivity and chatbot functionality - To make the app more interactive, we will implement a chatbot feature. After the user enters the name of an object, the application will prompt the user to specify the desired color and size of the object. This interaction will take place within the Unity app. Once the user provides the color and size information, the application will create the object accordingly in the scene. Furthermore, the application will convert the object data into JSON format and send it to the server. The server, implemented in Python, will receive the JSON data and process it accordingly.
