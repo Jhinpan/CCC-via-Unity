@@ -25,3 +25,27 @@ We will be creating a content creation app using Unity, which will have basic ch
  ## Step 3:
  ### Requirement:
   Adding interactivity and chatbot functionality - To make the app more interactive, we will implement a chatbot feature. After the user enters the name of an object, the application will prompt the user to specify the desired color and size of the object. This interaction will take place within the Unity app. Once the user provides the color and size information, the application will create the object accordingly in the scene. Furthermore, the application will convert the object data into JSON format and send it to the server. The server, implemented in Python, will receive the JSON data and process it accordingly.
+  
+ ### Implementation:
+ The value should be transported between *C#* and *Python scripts* through the *socket* in the form of *JSON*.
+ E.g. '{"name":"cube", "length":1, "width":1, "height":1, "position_x":0, "position_y":0, "position_z":0,"color":"blue"}'
+ Among this json :
+ Creating **cube** or **sphere** can be solved by GameObject.CreativePrimitivie
+ **position** and **scale** are all the attributes of ***transform***
+ For the color, I decided to realize the "red", ""blue", "black", "white", "yellow", those five kinds of human-readable color.
+ 
+ 
+ ```C#
+ GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+ 
+ cube.transform.position = new Vector3(0, 0, 0);
+ 
+ // Get the Renderer component from the new cube
+ var cubeRenderer = cube.GetComponent<Renderer>();
+ // Call SetColor using the shader property name "_Color" and setting the color to red
+ cubeRenderer.material.SetColor("_Color", Color.blue);
+ 
+ // Make the scale change to the localScale of the cube
+ scaleChange = new Vector3(0, 0, 0);
+ sphere.transform.localScale += scaleChange;
+ ```
