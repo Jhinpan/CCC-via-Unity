@@ -15,12 +15,17 @@ public class CSharpConnect : MonoBehaviour
     TcpListener listener;
     TcpClient client;
     Vector3 receivedPos = Vector3.zero;
+    // public GameObject cube;
 
     bool running;
 
     private void Update()
     {
+        // instantiate the cube with name, len, wid, hei, and color (random pos?)
+        // instantiate(cube); used to create the 
+        // Transform is used to store a position, rotation, and scale of an object
         transform.position = receivedPos; //assigning receivedPos in SendAndReceiveData()
+        // transform.scale = receivedScale; Value "1" is the original size
     }
 
     private void Start()
