@@ -27,11 +27,11 @@ We will be creating a content creation app using Unity, which will have basic ch
   Adding interactivity and chatbot functionality - To make the app more interactive, we will implement a chatbot feature. After the user enters the name of an object, the application will prompt the user to specify the desired color and size of the object. This interaction will take place within the Unity app. Once the user provides the color and size information, the application will create the object accordingly in the scene. Furthermore, the application will convert the object data into JSON format and send it to the server. The server, implemented in Python, will receive the JSON data and process it accordingly.
   
  ### Implementation:
- The value should be transported between *C#* and *Python scripts* through the *socket* in the form of *JSON*.
+ The value should be transported between *C#* and *Python scripts* through the *socket* in a *JSON* object content.
  
- E.g. '{"name":"cube", "length":1, "width":1, "height":1, "position_x":0, "position_y":0, "position_z":0,"color":"blue"}'
+ E.g. content = {"name":"cube", "length":1, "width":1, "height":1, "position_x":0, "position_y":0, "position_z":0,"color":"blue"};
  
- Among this json :
+ Inside this json object:
  
  Creating **cube** or **sphere** can be solved by GameObject.CreativePrimitivie
  
@@ -39,9 +39,8 @@ We will be creating a content creation app using Unity, which will have basic ch
  
  For the color, I decided to realize the "red", ""blue", "black", "white", "yellow", those five kinds of human-readable color.
  
- E.g:
+ E.g:( Following are C# codes)
 
- 
  ```C#
  GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
  
