@@ -28,12 +28,19 @@ We will be creating a content creation app using Unity, which will have basic ch
   
  ### Implementation:
  The value should be transported between *C#* and *Python scripts* through the *socket* in the form of *JSON*.
+ 
  E.g. '{"name":"cube", "length":1, "width":1, "height":1, "position_x":0, "position_y":0, "position_z":0,"color":"blue"}'
+ 
  Among this json :
+ 
  Creating **cube** or **sphere** can be solved by GameObject.CreativePrimitivie
+ 
  **position** and **scale** are all the attributes of ***transform***
+ 
  For the color, I decided to realize the "red", ""blue", "black", "white", "yellow", those five kinds of human-readable color.
  
+ E.g:
+
  
  ```C#
  GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
