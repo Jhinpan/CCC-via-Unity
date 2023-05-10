@@ -70,6 +70,11 @@ public class CSharpConnect : MonoBehaviour
             byte[] myWriteBuffer = Encoding.ASCII.GetBytes("Hey I got your message Python! Do You see this massage?"); //Converting string to byte data
             nwStream.Write(myWriteBuffer, 0, myWriteBuffer.Length); //Sending the data in Bytes to Python
         }
+        
+        // use PlayerPrefs.SetString() to store the data
+        // PlayerPrefs is just a key-value pair storage provided by Unity
+        // use PlayerPrefs.GetString() to retrieve the data
+        // PlayerPrefs.SetString("name", name);
     }
 
     public static Vector3 StringToVector3(string sVector)
