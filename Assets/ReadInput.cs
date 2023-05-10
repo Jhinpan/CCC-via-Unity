@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class ReadInput : MonoBehaviour
 {
-    public string name; // name = cube/sphere
-    
+    public string cubeName; // name = cube/sphere
     
     
     // Start is called before the first frame update
@@ -22,7 +21,7 @@ public class ReadInput : MonoBehaviour
 
     public void ReadStringInput(string s)
     {
-        name = s;
-        Debug.Log(input);
+        cubeName = s;
+        Debug.Log(cubeName);
     }
 }
