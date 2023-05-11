@@ -22,6 +22,23 @@ We will be creating a content creation app using Unity, which will have basic ch
   
  ---
  
- ## Step 3:
+ ## Step 3: (Done)
  ### Requirement:
   Adding interactivity and chatbot functionality - To make the app more interactive, we will implement a chatbot feature. After the user enters the name of an object, the application will prompt the user to specify the desired color and size of the object. This interaction will take place within the Unity app. Once the user provides the color and size information, the application will create the object accordingly in the scene. Furthermore, the application will convert the object data into JSON format and send it to the server. The server, implemented in Python, will receive the JSON data and process it accordingly.
+ ### Implementation:
+   the script handling this input, the InputHandler. This script has several important functions:
+   - In the Start method, we add a listener to the submit button. When clicked, it will call HandleSubmit.
+   - In HandleSubmit, we first parse the input text. We then log the parsed data and call CreateShape to create the shape in the scene. Finally, we call SendShapeDataToServer to send the shape data to the server.
+   - The ParseInput function uses regular expressions to extract the shape, position, scale, and color from the input text.
+   - The CreateShape function creates a GameObject based on the shape name, sets its position and scale, and assigns its color.
+   - The SendShapeDataToServer function creates a dictionary with the shape data, converts it to a JSON string, and sends it to a server.
+
+  ---
+
+  ## Final UI Input Form:
+  'shape, position, scale, color'. 
+  For example, we can enter 'cube, (0,0,0), (1,1,1), blue' at the text input field to create a blue cube at the origin with a scale of 1.
+  And we can also enter ‘sphere,(2,2,2),(2,2,2),red’ to create a red sphere at position (2,2,2) with a scale of 2.
+
+
+
